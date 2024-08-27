@@ -1,0 +1,20 @@
+프로그램 버전 정리
+
+python 3.8.8
+Elastic Search 6.5.1
+mysql 8.0.21 (connecter-j 8.0)
+jdk 1.8
+logstash 8.15 (conneter-j 9.0)
+spring
+ - sts-3.9.15.RELEASE
+ - 4.2.4-RELEASE
+mybatis
+ - 3.3.1
+mybatis-spring
+ - 1.2.4
+apache tomcat 8.5
+
+Eclipse
+	- version 2019-12 (4.14.0)
+STS3
+	- STS 3.9.13 (on Eclipse 4.14)

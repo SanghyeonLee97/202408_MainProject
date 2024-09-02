@@ -1,0 +1,120 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema main_project
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema main_project
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `main_project` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `main_project` ;
+
+-- -----------------------------------------------------
+-- Table `main_project`.`MEMBER`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `main_project`.`MEMBER` (
+  `USER_ID` INT NOT NULL AUTO_INCREMENT,
+  `EMAIL` VARCHAR(100) NOT NULL,
+  `PW` VARCHAR(300) NOT NULL,
+  `USER_NAME` VARCHAR(50) NOT NULL,
+  `USER_TEL` VARCHAR(20) NOT NULL,
+  `BIRTHDATE` VARCHAR(6) NOT NULL,
+  `GENDER` CHAR(1) NOT NULL,
+  `REG_DATE` DATETIME NOT NULL DEFAULT NOW(),
+  `MOD_DATE` DATETIME NULL DEFAULT NOW(),
+  PRIMARY KEY (`USER_ID`),
+  UNIQUE INDEX `USER_ID_UNIQUE` (`USER_ID` ASC) VISIBLE,
+  UNIQUE INDEX `EMAIL_UNIQUE` (`EMAIL` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `main_project`.`CAFE`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `main_project`.`CAFE` (
+  `CAFE_ID` INT NOT NULL AUTO_INCREMENT,
+  `CAFE_NAME` VARCHAR(100) NOT NULL,
+  `SITE` VARCHAR(300) NOT NULL,
+  `CAFE_TYPE` CHAR(1) NOT NULL,
+  `ADD_ROAD` VARCHAR(100) NOT NULL,
+  `ADD_OLD` VARCHAR(100) NOT NULL,
+  `LATITUDE` DOUBLE NOT NULL,
+  `LONGITUDE` DOUBLE NOT NULL,
+  `OPEN_CLOSE` VARCHAR(30) NULL,
+  `CAFE_TEL` VARCHAR(15) NULL,
+  `SUB_INFO` VARCHAR(100) NULL,
+  `WIFI` CHAR(1) NULL,
+  `ANIENTRY` CHAR(1) NULL,
+  `PARKING` CHAR(1) NULL,
+  `WHEELCHAIR` CHAR(1) NULL,
+  `PLAYROOM` CHAR(1) NULL,
+  `SMOKINGROOM` CHAR(1) NULL,
+  `TOTAL_POINT` INT NULL,
+  `POINT1` INT NULL,
+  `POINT2` INT NULL,
+  `POINT3` INT NULL,
+  `POINT4` INT NULL,
+  `POINT5` INT NULL,
+  `MOOD` CHAR(3) NULL,
+  `IMAGE_URL` VARCHAR(100) NULL,
+  `REG_DATE` DATETIME NOT NULL,
+  `MOD_DATE` DATETIME NULL,
+  PRIMARY KEY (`CAFE_ID`),
+  UNIQUE INDEX `CAFE_ID_UNIQUE` (`CAFE_ID` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `main_project`.`MEMBER_ACT`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `main_project`.`MEMBER_ACT` (
+  `USER_ID` INT NOT NULL,
+  `CAFE_ID` INT NOT NULL,
+  `GOOD` CHAR(1) NULL,
+  `POINT` INT NULL,
+  `REVIEW` VARCHAR(4000) NULL,
+  `MOOD` CHAR(3) NULL,
+  `REG_DATE` DATETIME NOT NULL DEFAULT now(),
+  `MOD_DATE` DATETIME NULL DEFAULT now(),
+  PRIMARY KEY (`USER_ID`, `CAFE_ID`),
+  INDEX `fk_MEMBER_has_CAFE_CAFE1_idx` (`CAFE_ID` ASC) VISIBLE,
+  INDEX `fk_MEMBER_has_CAFE_MEMBER_idx` (`USER_ID` ASC) VISIBLE,
+  CONSTRAINT `fk_MEMBER_has_CAFE_MEMBER`
+    FOREIGN KEY (`USER_ID`)
+    REFERENCES `main_project`.`MEMBER` (`USER_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_MEMBER_has_CAFE_CAFE1`
+    FOREIGN KEY (`CAFE_ID`)
+    REFERENCES `main_project`.`CAFE` (`CAFE_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `main_project`.`MEMBER_LIKE`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `main_project`.`MEMBER_LIKE` (
+  `USER_ID` INT NOT NULL,
+  `CAFE_TYPE` CHAR(1) NOT NULL,
+  `MOOD` CHAR(3) NULL,
+  `REG_DATE` DATETIME NOT NULL DEFAULT NOW(),
+  `MOD_DATE` DATETIME NULL DEFAULT NOW(),
+  PRIMARY KEY (`USER_ID`),
+  CONSTRAINT `fk_MEMBER_LIKE_MEMBER1`
+    FOREIGN KEY (`USER_ID`)
+    REFERENCES `main_project`.`MEMBER` (`USER_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

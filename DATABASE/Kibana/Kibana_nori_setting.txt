@@ -1,0 +1,117 @@
+#logstash로 전송 전 미리 세팅
+#cafe_index 가 기존에 생성되어 있으면 삭제 먼저 한다. 
+
+#DELETE /cafe_index
+
+
+PUT /cafe_index
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "tokenizer": {
+          "nori_user_dict": {
+            "type": "nori_tokenizer",
+            "decompound_mode": "mixed",
+            "discard_puntuation": "true",
+            "user_dictionary": "userdic_ko.txt"
+          }
+        },
+        "analyzer": {
+          "cafe_analyzer": {
+            "type": "custom",
+            "tokenizer": "nori_user_dict"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "add_old": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        },
+        "add_road": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        },
+        "cafe_name": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        },    
+        "cafe_tel": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        },         
+        "open_close": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        },    
+        "sub_info": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+# nori 여러 필드 or 검색
+GET /cafe_index/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "cafe_name.nori": "서교동"
+          }
+        },
+        {
+          "match": {
+            "add_old.nori": "서교동"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+
+GET /cafe_index/_search
+GET /cafe_index/_doc/1
+GET /cafe_index/_mapping

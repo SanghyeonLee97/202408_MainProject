@@ -8,7 +8,8 @@ FROM member_like;
 
 CREATE VIEW vw_cafe AS
 SELECT 
-    cafe_id, 
+    cafe_id,
+    site,
     cafe_name, 
     cafe_type, 
     mood, 

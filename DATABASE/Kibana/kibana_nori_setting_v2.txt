@@ -1,0 +1,68 @@
+#logstash로 전송 전 미리 세팅
+#cafe_index 가 기존에 생성되어 있으면 삭제 먼저 한다. 
+
+#DELETE /cafe_index
+
+
+PUT /cafe_index
+{
+  "settings": {
+    "index": {
+      "analysis": {
+        "tokenizer": {
+          "nori_user_dict": {
+            "type": "nori_tokenizer",
+            "decompound_mode": "mixed",
+            "discard_puntuation": "true"
+          }
+        },
+        "analyzer": {
+          "cafe_analyzer": {
+            "type": "custom",
+            "tokenizer": "nori_user_dict"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "cafe_name": {
+          "type": "keyword",
+          "fields": {
+            "nori": {
+              "type": "text",
+              "analyzer": "cafe_analyzer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#-----검색 예제----------------------
+
+
+GET /cafe_index/_search
+GET /cafe_index/_doc/1
+GET /cafe_index/_mapping
+
+
+GET /cafe_index/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "cafe_name.nori": "홍대"
+          }
+        }
+      ]
+    }
+  }
+}
+

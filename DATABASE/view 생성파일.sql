@@ -84,7 +84,7 @@ SELECT
             WHEN LEFT(M.BIRTHDATE, 2) <= '23' THEN CONCAT('20', LEFT(M.BIRTHDATE, 2))
             ELSE CONCAT('19', LEFT(M.BIRTHDATE, 2))
         END)) / 10) * 10 = 50 THEN '50대'
-        ELSE '60대 이상'
+        ELSE '60대'
     END AS AGE_GROUP,
     COUNT(MA.GOOD) AS like_count,
     MA.MOD_DATE AS mod_date_agelikes

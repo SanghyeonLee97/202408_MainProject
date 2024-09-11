@@ -7,7 +7,7 @@ BEGIN
     DECLARE random_mood CHAR(3);
 
     -- 루프를 사용하여 사용자 고유 번호가 1부터 100까지 반복
-    WHILE i <= 100 DO
+    WHILE i <= 500 DO
         -- 카페유형 F 또는 P를 랜덤으로 선택
         SET random_cafe_type = IF(RAND() < 0.5, 'F', 'P');
         

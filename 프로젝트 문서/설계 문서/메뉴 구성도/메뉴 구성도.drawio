@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.15">
+  <diagram name="페이지-1" id="umrP7UsyKBid9Atf-r-a">
+    <mxGraphModel dx="1434" dy="738" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#1A1A1A" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-1" value="&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Verdana&quot;&gt;Home&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-5" value="선호카페 추천" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-6" value="카페 지도보기" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-7" value="카페 대시보드" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-9" value="마이페이지" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-10" value="내 정보 수정" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-9">
+          <mxGeometry y="30" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-11" value="좋아요 누른 카페" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-9">
+          <mxGeometry y="55" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-12" value="리뷰를 작성한 카페" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-9">
+          <mxGeometry y="80" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-13" value="회원 탈퇴" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-9">
+          <mxGeometry y="105" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-14" value="로그인" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-16" value="성별 추천" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-17" value="남성" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-16">
+          <mxGeometry y="30" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-18" value="여성" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-16">
+          <mxGeometry y="55" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-21" value="연령별 추천" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="100" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-22" value="10대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="30" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-23" value="20대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="55" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-24" value="30대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="80" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-25" value="40대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="105" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-26" value="50대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="130" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-27" value="60대" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-21">
+          <mxGeometry y="155" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-28" value="검색" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#182E3E;rounded=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="100" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-29" value="카페 위치 지도" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-28">
+          <mxGeometry y="30" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-30" value="카페 리스트" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-28">
+          <mxGeometry y="55" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="bN6hdnhLZ-P5Ju3jySqW-31" value="검색 필터" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;" vertex="1" parent="bN6hdnhLZ-P5Ju3jySqW-28">
+          <mxGeometry y="80" width="100" height="25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
